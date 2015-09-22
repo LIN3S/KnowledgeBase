@@ -98,8 +98,9 @@ Now just launch the following commands:
 
 ##Theming
 
-To create your own theme just create a class that implements `LIN3S\KnowledgeBase\Templating\TemplateInterface` and pass
- it as third parameter to the Configuration class used by the command and the controller.
+To create your own theme just create a class that implements `LIN3S\KnowledgeBase\Templating\TemplateInterface` and pass it as third parameter to the Configuration class used by the command and the controller.
+
+Template rendering works together with the `Loader` classes. This class is responsible of fetching all required data to generate a page. The `DefaultLoader` generates an array with the menu tree, the document converted to html and the configuration class.
 
 ##How it works internally
 
@@ -107,11 +108,8 @@ In this section we detail the architecture of this component
 
 ###Document building
 
-`DocCommand` centralizes all document generation, take a look for further details.
+Entry point for document building is located in `DocumentationBuilder` class that receives a `DocumentIterator` and an instance of `GeneratorRegistry`. The first one contains the reference to all documents that need to be parsed, the second one contains all the generators required in the building process.
 
-Entry point for document building is located in `DocumentationBuilder` class that receives a `DocumentIterator` that
-contains the reference to all documents that need to be parsed, and a `GeneratorRegistry` that contains all the 
-generators required in the building process.
+If you want to add a custom Generator implement `GeneratorInterface` and add it to the `GeneratorRegistry` before passing it to the `DocumentationBuilder`. 
 
-If you want to add a custom Generator implement `GeneratorInterface` and create your own command to add the Generators
-you need to `GeneratorRegistry`. You can use `DocCommand` as reference.
+"Generation docs" section above, describes the whole proccess with code.

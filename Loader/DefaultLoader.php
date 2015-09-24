@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the Knowledge Base project.
+ * This file is part of the Knowledge Base package.
  *
  * Copyright (c) 2015 LIN3S <info@lin3s.com>
  *
@@ -16,8 +16,8 @@ use LIN3S\KnowledgeBase\Loader\Interfaces\LoaderInterface;
 /**
  * Default loader with basic content fetching
  *
- * @author Gorka Laucirica <gorka@lin3s.com>
- * @author Beñat Espiña <bespina@lin3s.com>
+ * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
+ * @author Beñat Espiña <benatespina@gmail.com>
  */
 class DefaultLoader implements LoaderInterface
 {

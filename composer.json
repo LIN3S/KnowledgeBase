@@ -1,8 +1,7 @@
 {
     "name": "lin3s/knowledge-base",
     "description": "PHP Component to build a knowledge base",
-    "homepage": "http://kb.lin3s.com",
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
@@ -12,13 +11,15 @@
         }
     ],
     "require": {
-        "php":                          ">=5.4",
+        "php":                 ">=5.4",
 
-        "erusev/parsedown":             "^1.5",
-        "symfony/filesystem":           "^2.7",
-        "symfony/finder":               "^2.7"
+        "erusev/parsedown":    "^1.5",
+        "symfony/filesystem":  "^2.7",
+        "symfony/finder":      "^2.7"
     },
     "autoload": {
-        "psr-4": { "LIN3S\\KnowledgeBase\\": "" }
+        "psr-4": {
+          "LIN3S\\KnowledgeBase\\": ""
+        }
     }
 }

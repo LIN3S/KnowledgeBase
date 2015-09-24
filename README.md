@@ -1,5 +1,13 @@
 #Knowledge Base component
-> PHP Component to build a knowledge base from your Markup files easily. 
+> PHP Component to build a knowledge base from your Markup files easily.
+
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/a96780cf-2f22-46ae-880a-531565df78d1/mini.png)](https://insight.sensiolabs.com/projects/a96780cf-2f22-46ae-880a-531565df78d1)
+[![Build Status](https://travis-ci.org/LIN3S/KnowledgeBase.svg?branch=master)](https://travis-ci.org/LIN3S/KnowledgeBase)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/LIN3S/KnowledgeBase/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/LIN3S/KnowledgeBase/?branch=master)
+[![Total Downloads](https://poser.pugx.org/lin3s/knowledge-base/downloads)](https://packagist.org/packages/lin3s/knowledge-base)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[![Latest Stable Version](https://poser.pugx.org/lin3s/knowledge-base/v/stable.svg)](https://packagist.org/packages/lin3s/knowledge-base)
+[![Latest Unstable Version](https://poser.pugx.org/lin3s/knowledge-base/v/unstable.svg)](https://packagist.org/packages/lin3s/knowledge-base)
 
 ##Installation
 Make sure you have composer installed in your computer.

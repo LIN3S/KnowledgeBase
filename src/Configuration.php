@@ -19,7 +19,7 @@ use LIN3S\KnowledgeBase\Templating\TemplateInterface;
  * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  * @author Beñat Espiña <benatespina@gmail.com>
  */
-final class Configuration
+class Configuration
 {
     /**
      * The docs path.

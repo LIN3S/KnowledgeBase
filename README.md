@@ -83,7 +83,7 @@ $builder->build();
 
 Now just launch the following commands:
 ```shell
-    $ php docs.php
+$ php docs.php
 ```
 > You need to create a symbolic link to match the assets url with the template you are using.
 

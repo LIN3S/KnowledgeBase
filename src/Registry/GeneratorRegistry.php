@@ -29,6 +29,14 @@ class GeneratorRegistry
     protected $generators;
 
     /**
+     * Constructor.
+     */
+    public function __construct()
+    {
+        $this->generators = [];
+    }
+
+    /**
      * Adds generator into generators array.
      *
      * @param string                                                       $name      The name of generator

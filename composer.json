@@ -17,9 +17,17 @@
         "symfony/filesystem":  "^2.7",
         "symfony/finder":      "^2.7"
     },
+    "require-dev": {
+        "phpspec/phpspec":     "^2.3"
+    },
     "autoload": {
         "psr-4": {
-          "LIN3S\\KnowledgeBase\\": ""
+            "LIN3S\\KnowledgeBase\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "spec\\LIN3S\\KnowledgeBase\\": "spec/"
         }
     }
 }

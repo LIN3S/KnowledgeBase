@@ -16,7 +16,7 @@ use LIN3S\KnowledgeBase\File\Interfaces\FileInterface;
 use LIN3S\KnowledgeBase\Generator\Interfaces\GeneratorInterface;
 
 /**
- * Class HTMLGenerator
+ * Class HTMLGenerator.
  *
  * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  * @author Beñat Espiña <benatespina@gmail.com>

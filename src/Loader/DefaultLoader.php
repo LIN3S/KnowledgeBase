@@ -43,7 +43,8 @@ class DefaultLoader implements LoaderInterface
     {
         return [
             'menu'          => json_decode(file_get_contents($this->configuration->buildPath() . 'menu.json'), true),
-            'html'          => null == $path ?: file_get_contents($this->configuration->buildPath() . 'html/' . $path . '.html'),
+            'html'          => null === $path ?:
+                file_get_contents($this->configuration->buildPath() . 'html/' . $path . '.html'),
             'configuration' => $this->configuration
         ];
     }

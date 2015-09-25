@@ -26,5 +26,5 @@ interface LoaderInterface
      *
      * @return mixed
      */
-    public function getTemplateData($path);
+    public function get($path);
 } 

@@ -13,16 +13,20 @@ namespace LIN3S\KnowledgeBase\Loader;
 
 use LIN3S\KnowledgeBase\Configuration;
 use LIN3S\KnowledgeBase\Loader\Interfaces\LoaderInterface;
+use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
- * Default loader with basic content fetching
+ * HTML loader with basic content fetching.
  *
  * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  * @author Beñat Espiña <benatespina@gmail.com>
  */
-class DefaultLoader implements LoaderInterface
+class HtmlLoader implements LoaderInterface
 {
     /**
+     * The configuration.
+     *
      * @var \LIN3S\KnowledgeBase\Configuration
      */
     protected $configuration;
@@ -40,13 +44,14 @@ class DefaultLoader implements LoaderInterface
     /**
      * {@inheritdoc}
      */
-    public function getTemplateData($path)
+    public function get($path)
     {
-        return [
-            'menu'          => json_decode(file_get_contents($this->configuration->buildPath() . 'menu.json'), true),
-            'html'          => null === $path ?:
-                file_get_contents($this->configuration->buildPath() . 'html/' . $path . '.html'),
-            'configuration' => $this->configuration
-        ];
+        $filename = $this->configuration->buildPath() . 'html/' . $path . '.html';
+        $filesystem = new Filesystem();
+        if (false === $filesystem->exists($filename)) {
+            throw new \Exception('This page does not exist');
+        }
+
+        return file_get_contents($filename);
     }
 }

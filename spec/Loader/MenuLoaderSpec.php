@@ -16,11 +16,11 @@ use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 /**
- * Spec class of default loader.
+ * Spec class of menu loader.
  *
  * @author Beñat Espiña <benatespina@gmail.com>
  */
-class DefaultLoaderSpec extends ObjectBehavior
+class MenuLoaderSpec extends ObjectBehavior
 {
     function let(Configuration $configuration)
     {
@@ -31,7 +31,7 @@ class DefaultLoaderSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('LIN3S\KnowledgeBase\Loader\DefaultLoader');
+        $this->shouldHaveType('LIN3S\KnowledgeBase\Loader\MenuLoader');
     }
 
     function it_implements_loader_interface()
@@ -39,8 +39,8 @@ class DefaultLoaderSpec extends ObjectBehavior
         $this->shouldImplement('LIN3S\KnowledgeBase\Loader\Interfaces\LoaderInterface');
     }
 
-    function it_gets_templates()
+    function it_get()
     {
-        $this->getTemplateData('build')->shouldBeArray();
+        $this->get('build');
     }
 }

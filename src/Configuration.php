@@ -45,10 +45,10 @@ class Configuration
     /**
      * Constructor.
      *
-     * @param string                                            $docsPath      Path where the docs are located
-     * @param string                                            $buildPath     Path where the generated docs will be placed
-     * @param \LIN3S\KnowledgeBase\Templating\TemplateInterface $template      The template
-     * @param string                                            $assetsBaseUrl Base url templates will use to find assets
+     * @param string            $docsPath      Path where the docs are located
+     * @param string            $buildPath     Path where the generated docs will be placed
+     * @param TemplateInterface $template      The template
+     * @param string            $assetsBaseUrl Base url templates will use to find assets
      */
     public function __construct($docsPath, $buildPath, TemplateInterface $template, $assetsBaseUrl = '/templates')
     {
@@ -86,5 +86,15 @@ class Configuration
     public function template()
     {
         return $this->template;
+    }
+
+    /**
+     * The assets base url.
+     *
+     * @return string
+     */
+    public function assetsBaseUrl()
+    {
+        return $this->assetsBaseUrl;
     }
 }

@@ -53,8 +53,8 @@ final class HTMLGenerator implements GeneratorInterface
 
             if (!file_exists($this->configuration->buildPath() . 'html' . $file->getPath())) {
                 mkdir($this->configuration->buildPath() . 'html' . $file->getPath(), 0755, true);
-                file_put_contents($path, $content);
             }
+            file_put_contents($path, $content);
         }
     }
 

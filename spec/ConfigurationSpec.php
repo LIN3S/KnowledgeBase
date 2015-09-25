@@ -46,4 +46,9 @@ class ConfigurationSpec extends ObjectBehavior
     {
         $this->template()->shouldReturn($template);
     }
+
+    function it_assets_base_url()
+    {
+        $this->assetsBaseUrl()->shouldReturn('/templates');
+    }
 }

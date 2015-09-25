@@ -111,3 +111,6 @@ second one contains all the generators required in the building process.
 If you want to add a custom Generator implement `GeneratorInterface` and add it to the `GeneratorRegistry` before
 passing it to the `DocumentationBuilder`. 
 > "Generation docs" section above, describes the whole process with code.
+
+##Licensing Options
+[![License](https://poser.pugx.org/lin3s/knowledge-base/license.svg)](https://github.com/LIN3S/KnowledgeBase/blob/master/LICENSE)

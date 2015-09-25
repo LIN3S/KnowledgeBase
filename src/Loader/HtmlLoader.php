@@ -14,7 +14,6 @@ namespace LIN3S\KnowledgeBase\Loader;
 use LIN3S\KnowledgeBase\Configuration;
 use LIN3S\KnowledgeBase\Loader\Interfaces\LoaderInterface;
 use Symfony\Component\Filesystem\Filesystem;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * HTML loader with basic content fetching.

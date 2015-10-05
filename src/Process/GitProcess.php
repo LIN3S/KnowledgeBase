@@ -27,7 +27,7 @@ final class GitProcess
      */
     public static function updateModules()
     {
-        $process = new Process('git submodule update --remote --merge', __DIR__ . '/../../../../');
+        $process = new Process('git submodule update --remote --merge', __DIR__ . '/../../../../../');
         $process->run();
 
         return $process->isSuccessful() ? true : 'Something wrong happens during update git modules';
